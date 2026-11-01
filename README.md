@@ -14,7 +14,7 @@ A fully automated analytics pipeline built with dbt and DuckDB, transforming app
 |---|---|---|
 | **dbt Transformation Pipeline** | Raw sources → cleaned models → analytical insight marts | [`analytics/models/`](analytics/models/) |
 | **Data Quality Tests** | `unique` and `not_null` tests to validate mart-level data integrity | [`schema.yml`](analytics/models/schema.yml) |
-| **dbt Documentation** | Model lineage, descriptions, and column-level tests | [Live dbt Docs](https://github.com/htikehsumyat/dbt-duckdb-pipeline) |
+| **dbt Documentation** | Model lineage, descriptions, and column-level tests | [Live dbt Docs]( https://htikehsumyat.github.io/dbt-duckdb-pipeline/) |
 | **Automated CI/CD** | GitHub Actions workflow to build, test, and publish the pipeline on every push | [`.github/workflows/`](.github/workflows/dbt_build.yml) |
 | **Environment Management** | Separate development and production configurations using dbt targets | [`ci/profiles.yml`](ci/profiles.yml) |
 | **Published DuckDB Warehouse** | Queryable analytical warehouse using DuckDB's `ATTACH` functionality | [Query the Warehouse](https://github.com/htikehsumyat/dbt-duckdb-pipeline) |
@@ -71,7 +71,11 @@ SELECT * FROM monthly_summary;
 ```
 ## 📖 Docs
 
-Docs are generated with dbt docs generate and published to GitHub Pages. The site shows:
+Docs are generated with dbt docs generate and published to GitHub Pages. 
+
+→ https://htikehsumyat.github.io/dbt-duckdb-pipeline/
+
+The site shows:
 
 - The full lineage graph (sources → models → marts)
 - Model and column descriptions from the YAML
