@@ -69,15 +69,10 @@ SHOW TABLES;
 SELECT * FROM top_locations;
 SELECT * FROM monthly_summary;
 ```
+## 📖 Docs
 
-## Project Layout
+Docs are generated with dbt docs generate and published to GitHub Pages. The site shows:
 
-├── .github/workflows/dbt_build.yml   # public CI: build, test, publish
-├── ci/profiles.yml                   # prod DuckDB target for Actions
-├── data/                             # raw + warehouses (gitignored; CI regenerates)
-├── docs/                             # dbt docs site (GitHub Pages)
-├── analytics/
-│   ├── dbt_project.yml
-│   └── models/                       # sources, staging, marts, schema.yml
-└── scripts/download_data.py          # fetch raw parquet before build
-i
+- The full lineage graph (sources → models → marts)
+- Model and column descriptions from the YAML
+- Which columns carry tests
